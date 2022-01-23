@@ -1,0 +1,463 @@
+/*!
+Theme Name: Simpe Dani WP
+Theme URI: https://me.dani.work/simpe-dani-wp/
+Author: Dani
+Author URI: https://me.dani.work/
+Description: This is a simple Dani WP theme.
+Version: 0.0.4
+Requires at least: 4.5
+Tested up to: 5.8
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: miniva
+Tags: accessibility-ready, blog, block-styles, custom-background, custom-header, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, grid-layout, left-sidebar, right-sidebar, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, two-columns, wide-blocks
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Miniva is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+@import './style-dark.css';
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #404040;
+}
+
+pre {
+    font-family: Hack, "Fira Code", Consolas, Menlo, Monaco, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
+}
+
+header {
+    padding: 20px 0px;
+}
+
+header .title {
+    font-weight: 600;
+    font-size: 2em;
+}
+
+header a {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+header .image {
+    margin-right: 20px;
+}
+
+#content {
+    margin-top: 20px;
+}
+
+#content a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+#content .menu-item {
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+#content .menu-item:hover {
+    font-weight: 600;
+}
+
+#content .menu-item .icon {
+    font-size: 30px;
+}
+
+h2.title {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.project-item:last-child {
+    margin-bottom: 0px;
+}
+
+.project-item {
+    margin-bottom: 30px;
+}
+
+.project-item .number {
+    border-radius: 50%;
+    margin-right: 10px;
+    width: 60px;
+    height: 60px;
+    font-size: 18px;
+    background: #e0e0e0;
+}
+
+.project-item .number span {
+    font-weight: bold;
+}
+
+.project-item .project-description {
+    width: calc(100% - 60px);
+}
+
+.project-item .project-description h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.project-item .project-description h6 {
+    margin: 0;
+    font-size: 14px;
+}
+
+.project-item .project-description p {
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+#contact {
+    font-size: 14px;
+}
+
+
+/* Skill Items */
+
+.skill-item {
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.skill-wrap {
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+.skill-item:first-child {
+    margin-left: 0px;
+}
+
+.skill-item span {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* Wordpress */
+
+
+/* Menu */
+
+@media screen and (max-width: 991px) {
+    .menu-main-menu-container {
+        margin-top: 20px !important;
+    }
+    .menu-main-menu-container ul li {
+        margin: 0px !important;
+        padding: 0px !important;
+        height: auto !important;
+        display: block !important;
+    }
+    .menu-main-menu-container ul li a {
+        padding: 10px !important;
+        background: #dadada;
+        display: block;
+    }
+    .menu-main-menu-container .menu>.menu-item::after {
+        content: '' !important;
+    }
+}
+
+.menu-main-menu-container {
+    margin: 0;
+    padding: 0;
+}
+
+.menu-main-menu-container .menu {
+    margin: 0;
+    padding: 0;
+}
+
+.menu-main-menu-container .menu .menu-item:last-child {
+    margin-right: 0;
+}
+
+.menu-main-menu-container .menu .menu-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu-main-menu-container .menu>.menu-item:last-child:after {
+    content: none;
+}
+
+.menu-main-menu-container .menu>.menu-item::after {
+    content: ' · ';
+    margin: 0px 10px 0px 10px;
+}
+
+.menu-main-menu-container .menu .menu-item {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+}
+
+
+/* Sub Menu */
+
+.menu-main-menu-container .menu .menu-item.menu-item-has-children .sub-menu {
+    display: none;
+    z-index: 1000;
+}
+
+.menu-main-menu-container .menu .menu-item.menu-item-has-children:hover .sub-menu {
+    display: block;
+    position: absolute;
+    background: white;
+    border: 1px solid #e0e0e0;
+    padding: 0px;
+    border-radius: 10px;
+}
+
+.menu-main-menu-container .menu .menu-item.menu-item-has-children .sub-menu .menu-item a {
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+}
+
+.menu-main-menu-container .menu .menu-item.menu-item-has-children .sub-menu .menu-item:hover a {
+    text-decoration: none;
+    background: #e0e0e0;
+    border-radius: 10px;
+}
+
+.menu-main-menu-container .menu .menu-item.menu-item-has-children .sub-menu .menu-item {
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* <WP Sidebar> */
+
+.sidebar-module:last-child {
+    margin-bottom: 0px;
+}
+
+.sidebar-module {
+    margin-bottom: 30px;
+}
+
+.sidebar-module h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.sidebar-module a:hover {
+    text-decoration: none;
+    color: var(--bs-primary);
+}
+
+.sidebar-module a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.sidebar-module a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.sidebar-module .wp-block-search__label {
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+
+/* </WP Sidebar> */
+
+
+/* Article */
+
+article:last-child {
+    margin-bottom: 0px;
+}
+
+article {
+    margin-bottom: 30px;
+}
+
+article p {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    color: #585858;
+}
+
+article h2 {
+    font-size: 28px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-weight: 600;
+}
+
+article .date-time-author {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #585858;
+}
+
+
+/* SIngle Article */
+
+#single-article {
+    max-width: 800px;
+}
+
+#single-article h1 {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+#single-article h1.title {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0;
+}
+
+#single-article h2 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+#single-article h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#single-article h5 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#single-article h6 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#single-article .content {
+    font-size: 16px;
+}
+
+#single-article .content p:last-child {
+    margin-bottom: 0;
+}
+
+#single-article .date-time-author {
+    margin-bottom: 20px;
+    font-size: 17px;
+    font-style: italic;
+}
+
+#single-article .content p {
+    margin-bottom: 24px;
+}
+
+#single-article .content .wp-caption img {
+    border-radius: 10px;
+    width: 100% !important;
+}
+
+#single-article .content .wp-caption {
+    margin: auto;
+    margin-bottom: 24px;
+    text-align: center;
+    width: 100%;
+}
+
+#single-article .content figure figcaption {
+    text-align: center;
+}
+
+#single-article .content blockquote {
+    border-left: 5px solid #404040;
+    padding-left: 8px;
+}
+
+
+/* Comments */
+
+#comment-section {
+    margin-top: 30px;
+}
+
+#comment-section ol.commentlist {
+    margin: 0;
+    padding: 0;
+}
+
+#comment-section ol.commentlist li:nth-child(odd) {
+    background: #eee;
+}
+
+#comment-section ol.commentlist li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 30px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#comment-section ol.commentlist li .reply a {
+    margin-left: 0;
+    background-color: var(--bs-primary);
+    padding: 5px 10px;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#comment-section ol.commentlist li .comment-author {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.comment-form-comment textarea,
+.comment-form-author input,
+.comment-form-email input,
+.comment-form-url input {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-submit input {
+    background-color: var(--bs-primary);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: none;
+    margin-top: 20px;
+}
+
+#comment-section #respond .comment-form-comment textarea:focus {
+    border: 1px solid var(--bs-primary);
+}
+
+
+/* /Comments */

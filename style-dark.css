@@ -1,0 +1,73 @@
+body.dark {
+    color: #afafaf;
+    background: #171f2a;
+}
+
+
+/* <Toggle Button> */
+
+.toggle-theme {
+    background: #171f2a;
+    color: #afafaf;
+    border: none;
+}
+
+#button-dark {
+    background-color: inherit;
+    color: #171f2a;
+}
+
+
+/* </Toggle Button> */
+
+body.dark input,
+body.dark textarea {
+    background: #212831;
+    color: #afafaf;
+}
+
+body.dark textarea {
+    border: 1px solid #232931;
+}
+
+body.dark article p {
+    color: #afafaf;
+}
+
+
+/* Pagination */
+
+body.dark ul.pagination a {
+    background: #212831;
+    border: none;
+}
+
+body.dark ul.pagination li.active .page-link {
+    background: #1f2c3d !important;
+    border: #1f2c3d;
+}
+
+
+/* Pagination */
+
+
+/* Sub menu */
+
+body.dark .menu-main-menu-container .menu .menu-item.menu-item-has-children:hover .sub-menu {
+    display: block;
+    position: absolute;
+    background: #1f2c3d;
+    border: none;
+    padding: 0px;
+    border-radius: 10px;
+}
+
+body.dark .menu-main-menu-container .menu .menu-item.menu-item-has-children .sub-menu .menu-item:hover a {
+    text-decoration: none;
+    background: #272d35;
+    border-radius: 10px;
+}
+
+body.dark .border-top {
+    border-top: 1px solid #2c3035 !important;
+}
