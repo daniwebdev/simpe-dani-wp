@@ -29,6 +29,10 @@ body {
     color: #404040;
 }
 
+a {
+    text-decoration: none;
+}
+
 pre {
     font-family: Hack, "Fira Code", Consolas, Menlo, Monaco, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
 }
@@ -120,6 +124,37 @@ h2.title {
 
 #contact {
     font-size: 14px;
+}
+
+
+/* custom scrollbar */
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: #171E2B;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: #4d4d4d;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #272727;
 }
 
 

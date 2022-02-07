@@ -10,7 +10,7 @@ $category = get_the_category();
 
 <div id="article" class="mt-3">
   <div class="container">
-    <div class="row">
+    <div class="row g-5">
       <div class="col-md-9">
         <header>
             <?php

@@ -40,6 +40,7 @@ body.dark article p {
 body.dark ul.pagination a {
     background: #212831;
     border: none;
+    color: #afafaf;
 }
 
 body.dark ul.pagination li.active .page-link {
@@ -70,4 +71,12 @@ body.dark .menu-main-menu-container .menu .menu-item.menu-item-has-children .sub
 
 body.dark .border-top {
     border-top: 1px solid #2c3035 !important;
+}
+
+body.dark article a {
+    color: #afafaf;
+}
+
+body.dark article a:hover {
+    color: var(--primary-color);
 }

@@ -12,7 +12,7 @@ get_header();
 
 <div class="container">
 
-	<div class="row">
+	<div class="row g-5">
 		<div class="col-md-9">
 			<main id="single-article" class="" role="main">
 				<h1 class="title">

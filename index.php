@@ -4,7 +4,7 @@ get_header();
 
 <div id="article" class="mt-3">
   <div class="container">
-    <div class="row">
+    <div class="row g-5">
       <div class="col-md-9">
       <?php
         $args = array(

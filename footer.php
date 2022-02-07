@@ -1,6 +1,6 @@
 <footer class="mt-5 p-3 border-top">
     <div class="container text-center">
-        Coder Otodidak Network &copy;
+        <?= get_bloginfo( 'name' );?>
         <span class="d-block" id="y"></span>
     </div>
 </footer>
