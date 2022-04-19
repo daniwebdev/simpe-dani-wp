@@ -4,7 +4,7 @@ Theme URI: https://me.dani.work/simpe-dani-wp/
 Author: Dani
 Author URI: https://me.dani.work/
 Description: This is a simple Dani WP theme.
-Version: 0.0.4
+Version: 0.2.2
 Requires at least: 4.5
 Tested up to: 5.8
 Requires PHP: 7.4
@@ -191,6 +191,7 @@ h2.title {
 @media screen and (max-width: 991px) {
     .menu-main-menu-container {
         margin-top: 20px !important;
+        border-radius: 20px;
     }
     .menu-main-menu-container ul li {
         margin: 0px !important;
@@ -200,11 +201,18 @@ h2.title {
     }
     .menu-main-menu-container ul li a {
         padding: 10px !important;
-        background: #dadada;
+        background: #f0f0f0;
         display: block;
+    }
+    .menu-main-menu-container ul li:first-child a {
+        border-radius: 20px 20px 0px 0px;
+    }
+    .menu-main-menu-container ul li:last-child a {
+        border-radius: 0px 0px 20px 20px ;
     }
     .menu-main-menu-container .menu>.menu-item::after {
         content: '' !important;
+        margin: 0px !important;
     }
 }
 
@@ -289,6 +297,15 @@ h2.title {
     margin-bottom: 30px;
 }
 
+.sidebar-module>ul {
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar-module ul {
+    counter-reset: listModule;
+}
+
 .sidebar-module h4 {
     font-size: 20px;
     font-weight: 600;
@@ -297,7 +314,7 @@ h2.title {
 
 .sidebar-module a:hover {
     text-decoration: none;
-    color: var(--bs-primary);
+    color: #e40aad;
 }
 
 .sidebar-module a {
@@ -308,6 +325,8 @@ h2.title {
 .sidebar-module a {
     text-decoration: none;
     color: inherit;
+    display: flex;
+    align-items: flex-start;
 }
 
 .sidebar-module .wp-block-search__label {
@@ -315,6 +334,23 @@ h2.title {
     font-weight: bold;
 }
 
+.sidebar-module li {
+    list-style: none;
+    counter-increment: listModule;
+    margin-bottom: 10px;
+}
+.sidebar-module li a::before {
+    display: flex;
+    flex: 0 0 34px;
+    content: counter(listModule);
+    width: 34px;
+    height: 34px;
+    margin-right: 10px;
+    background: #2c2c33;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
 
 /* </WP Sidebar> */
 
@@ -343,9 +379,9 @@ article h2 {
 }
 
 article .date-time-author {
-    font-size: 14px;
+    font-size: 1rem;
     margin-top: 10px;
-    color: #585858;
+    color: #818080;
 }
 
 
@@ -390,6 +426,15 @@ article .date-time-author {
     font-size: 16px;
 }
 
+#single-article .content a {
+    color: #e40aad;
+
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-style: dotted;
+}
+
+
 #single-article .content p:last-child {
     margin-bottom: 0;
 }
@@ -424,6 +469,7 @@ article .date-time-author {
     border-left: 5px solid #404040;
     padding-left: 8px;
 }
+/* </SIngle Article> */
 
 
 /* Comments */
@@ -476,11 +522,13 @@ article .date-time-author {
     border-radius: 10px;
     border: 1px solid #e0e0e0;
     padding: 10px;
+    border: none;
     font-size: 16px;
+    background-color: #e0e0e0;
 }
 
 .form-submit input {
-    background-color: var(--bs-primary);
+    background-color: #585858;
     color: white;
     font-size: 16px;
     font-weight: 600;
@@ -496,3 +544,64 @@ article .date-time-author {
 
 
 /* /Comments */
+
+
+/* Table */
+
+.content table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.content table th {
+    font-weight: 600;
+    font-size: 16px;
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.content table td {
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.content table tr:nth-child(even) {
+    background: #f9f9f9;
+}
+
+/* End Table */
+
+
+/* Pagination */
+.post-navigate {
+    margin-top: 30px;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 30px;
+}
+.post-navigate .next {
+    text-align: right;
+}
+/* /Pagination */
+
+/* Search Widget */
+.wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper {
+    padding: 0 !important;
+    border: none;
+}
+.wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper .wp-block-search__input {
+    border-radius: 5px;
+    padding: 10px 15px;
+    background: #a1a1a1;
+}
+
+.wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper .wp-block-search__button {
+    background: #29323d;
+    color: #afafaf;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* </SEarch WIdget */

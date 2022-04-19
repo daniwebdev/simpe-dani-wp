@@ -20,6 +20,27 @@ body.dark {
 
 /* </Toggle Button> */
 
+/* Search Widget */
+body.dark .wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper {
+    padding: 0 !important;
+    border: none;
+}
+body.dark .wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper .wp-block-search__input {
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+body.dark .wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper .wp-block-search__button {
+    background: #29323d;
+    color: #afafaf;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* </SEarch WIdget */
+
 body.dark input,
 body.dark textarea {
     background: #212831;
@@ -77,6 +98,37 @@ body.dark article a {
     color: #afafaf;
 }
 
-body.dark article a:hover {
-    color: var(--primary-color);
+body.dark a:hover {
+    color: #e40aad;
+    text-shadow: 1px 1px 1px #312e2e;
 }
+
+body.dark a {
+    color: #afafaf;
+}
+
+body.dark .content a {
+    color: #e40aad;
+
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-style: dotted;
+}
+
+/* Table Content */
+
+
+body.dark .content table tr:nth-child(odd) {
+    background: #1b2638;
+}
+
+body.dark .content table tr:nth-child(even) {
+    background: #161d2c
+}
+
+
+body.dark .wp-block-table.is-style-stripes {
+    border-bottom: 0;
+}
+
+/* /Table Content */

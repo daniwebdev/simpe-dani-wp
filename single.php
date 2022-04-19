@@ -15,6 +15,7 @@ get_header();
 	<div class="row g-5">
 		<div class="col-md-9">
 			<main id="single-article" class="" role="main">
+
 				<h1 class="title">
 					<?php
 						the_title();
@@ -27,6 +28,13 @@ get_header();
 						the_author();
 					?>
 				</div>
+
+				<?php if(get_the_post_thumbnail() != null): ?>
+
+				<img class="mb-3" src="<?=get_the_post_thumbnail_url();?>" alt="<?=the_title();?>" style="width: 100%; border-radius: 20px">
+
+				<?php endif; ?>
+
 				<div class="content">
 					<?php
 						the_content();
