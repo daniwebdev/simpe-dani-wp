@@ -28,11 +28,13 @@ body.dark .wp-block-search.wp-block-search__button-inside .wp-block-search__insi
 body.dark .wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper .wp-block-search__input {
     border-radius: 5px;
     padding: 10px 15px;
+    color: #5c5c5c;
+    background: #29323d;
 }
 
 body.dark .wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper .wp-block-search__button {
-    background: #29323d;
-    color: #afafaf;
+    background: #242d38;
+    color: #5c5c5c;
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
@@ -132,3 +134,17 @@ body.dark .wp-block-table.is-style-stripes {
 }
 
 /* /Table Content */
+
+/* Sidebar Module */
+body.dark .sidebar-module li a::before {
+    display: flex;
+    flex: 0 0 34px;
+    content: counter(listModule);
+    width: 34px;
+    height: 34px;
+    margin-right: 10px;
+    background: #2c2c33;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}

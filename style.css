@@ -24,13 +24,19 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
 @import './style-dark.css';
+
 body {
+    --bs-primary: #e40aad;
     font-family: 'Poppins', sans-serif;
     color: #404040;
 }
 
 a {
     text-decoration: none;
+}
+
+a:hover {
+    color: #e40aad;
 }
 
 pre {
@@ -326,6 +332,7 @@ h2.title {
     text-decoration: none;
     color: inherit;
     display: flex;
+    align-items: center;
     align-items: flex-start;
 }
 
@@ -338,6 +345,8 @@ h2.title {
     list-style: none;
     counter-increment: listModule;
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
 }
 .sidebar-module li a::before {
     display: flex;
@@ -346,7 +355,7 @@ h2.title {
     width: 34px;
     height: 34px;
     margin-right: 10px;
-    background: #2c2c33;
+    background: #e6e6e6;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
@@ -382,6 +391,10 @@ article .date-time-author {
     font-size: 1rem;
     margin-top: 10px;
     color: #818080;
+}
+
+.post-item {
+    color: #585858;
 }
 
 
@@ -428,7 +441,6 @@ article .date-time-author {
 
 #single-article .content a {
     color: #e40aad;
-
     text-decoration: underline;
     text-underline-offset: 4px;
     text-decoration-style: dotted;

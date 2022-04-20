@@ -1,4 +1,4 @@
-<a href="<?=the_permalink();?>">
+<a class="post-item" href="<?=the_permalink();?>">
     <h2>
     <?= the_title(); ?>
     </h2>
