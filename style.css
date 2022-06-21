@@ -25,6 +25,12 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 @import './style-dark.css';
 
+/* Block Plugin */
+pre.wp-block-code {
+    margin-bottom: 24px;
+}
+/* /Block Plugin */
+
 body {
     --bs-primary: #e40aad;
     font-family: 'Poppins', sans-serif;
@@ -617,3 +623,20 @@ article .date-time-author {
 }
 
 /* </SEarch WIdget */
+
+
+.sharebutton-single {
+    /* background-color: #e40aad; */
+    display: flex;
+    align-items: center;
+}
+.sharebutton-single a {
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.sharebutton-single a.dropdown-item {
+    color: #161E2A !important;
+    text-decoration: none;
+    margin-right: 10px;
+}

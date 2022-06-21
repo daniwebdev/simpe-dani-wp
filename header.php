@@ -70,7 +70,7 @@ Version : <?= wp_get_theme()->get('Version'); ?>
         </div>
     </header>
 
-    <nav>
+    <nav class="mb-3">
         <div class="container">
             <div class="row">
                 <div class="col-12">

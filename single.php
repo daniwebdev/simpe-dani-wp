@@ -21,12 +21,31 @@ get_header();
 						the_title();
 					?>
 				</h1>
-				<div class="date-time-author">
-					<?php
-						the_date();
-						echo ' · ';
-						the_author();
-					?>
+
+				<div class="d-flex justify-content-between my-3 align-items-center">
+					<div class="date-time-author">
+						<?php
+							the_date();
+							echo ' · ';
+							the_author();
+						?>
+					</div>
+					<div class="dropdown open p-0 sharebutton-single">
+						<a class="btn dropdown-toggle p-0 m-0" type="button" id="triggerId" data-bs-toggle="dropdown" aria-haspopup="true">
+							<i class="fa fa-share" aria-hidden="true"></i>
+						</a>
+						<div class="dropdown-menu" aria-labelledby="triggerId">
+							<a class="dropdown-item" href="https://facebook.com/sharer/sharer.php?u=<?php echo get_permalink(); ?>">
+								<i class="fab fa-facebook me-2" aria-hidden="true"></i> Facebook
+							</a>
+							<a class="dropdown-item" href="https://twitter.com/intent/tweet?url=<?php echo get_permalink(); ?>">
+								<i class="fab fa-twitter me-2" aria-hidden="true"></i> Twitter
+							</a>
+							<a class="dropdown-item" href="https://www.linkedin.com/shareArticle?mini=true&url=<?php echo get_permalink(); ?>&title=<?php echo get_the_title(); ?>&summary=&source=">
+								<i class="fab fa-linkedin me-2" aria-hidden="true"></i> LinkedIn
+							</a>
+						</div>
+					</div>
 				</div>
 
 				<?php if(get_the_post_thumbnail() != null): ?>
