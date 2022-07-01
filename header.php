@@ -33,11 +33,13 @@ Version : <?= wp_get_theme()->get('Version'); ?>
 </head>
 
 <body class="dark">
-    <header class="mt-4">
+    <header class="mt-4 d-none d-md-block">
         <div class="container d-block d-md-flex text-center text-md-start">
+            
             <div class="image">
                 <img class="rounded-circle" width="150" src="https://www.gravatar.com/avatar/<?=md5('me@dani.work');?>?s=300" alt="" />
             </div>
+
             <div class="profile" style="width: 100%">
                 <div class="d-md-flex d-block justify-content-between">
                     <div>
@@ -70,7 +72,7 @@ Version : <?= wp_get_theme()->get('Version'); ?>
         </div>
     </header>
 
-    <nav class="mb-3">
+    <nav class="mb-3 d-none d-md-block">
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -89,6 +91,31 @@ Version : <?= wp_get_theme()->get('Version'); ?>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="py-5 d-block d-md-none">
+        <div class="d-flex container justify-content-between">
+            <div class="d-flex align-items-center gap-3">
+                <img class="rounded-circle" width="70" src="https://www.gravatar.com/avatar/<?=md5('me@dani.work');?>?s=300" alt="" />
+                <div>
+                    <h5>
+                        <a href="<?= get_home_url(); ?>">
+                            <?= get_bloginfo( 'name' );?>
+                        </a>
+                    </h5>
+                    <h6>Software Engineer <span class="mx-2">·</span> Fullstack</h6>
+                </div>
+            </div>
+
+            <div>
+                <button id="button-light" class="toggle-theme d-none">
+                    <svg viewBox="0 0 24 24" width="36" height="36" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                </button>
+                <button id="button-dark" class="toggle-theme">
+                    <svg viewBox="0 0 24 24" width="36" height="36" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
             </div>
         </div>
     </nav>

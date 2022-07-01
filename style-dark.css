@@ -148,3 +148,10 @@ body.dark .sidebar-module li a::before {
     justify-content: center;
     border-radius: 50%;
 }
+
+
+/* Post Navigate */
+body.dark .post-navigate {
+    border-top: 1px solid #273F4A;
+    padding-top: 30px;
+}

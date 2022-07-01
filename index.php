@@ -2,7 +2,7 @@
 get_header();
 ?>
 
-<div id="article" class="mt-3">
+<div id="article">
   <div class="container">
     <div class="row g-5">
       <div class="col-md-9">

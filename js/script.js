@@ -1,6 +1,6 @@
 
-var LIGHT_BUTTON = document.querySelector("#button-light");
-var DARK_BUTTON = document.querySelector("#button-dark");
+var LIGHT_BUTTON = document.querySelectorAll("#button-light");
+var DARK_BUTTON = document.querySelectorAll("#button-dark");
 
 document.body.onload = function () {
     if (localStorage.getItem("theme") === "dark") {
@@ -11,35 +11,43 @@ document.body.onload = function () {
 
   if (document.body.classList.contains("dark")) {
     //IS DARK
-    LIGHT_BUTTON.classList.remove("d-none");
-    DARK_BUTTON.classList.add("d-none");
+    LIGHT_BUTTON.forEach(button => button.classList.remove("d-none"));
+    DARK_BUTTON.forEach(button => button.classList.add("d-none"));
   } else {
     //IS LIGHT
-    DARK_BUTTON.classList.remove("d-none");
-    LIGHT_BUTTON.classList.add("d-none");
+    LIGHT_BUTTON.forEach(button => button.classList.add("d-none"));
+    DARK_BUTTON.forEach(button => button.classList.remove("d-none"));
   }
 
   //toggle button light button
-  LIGHT_BUTTON.addEventListener("click", function () {
-    document.body.classList.toggle("dark");
-    LIGHT_BUTTON.classList.toggle("d-none");
-    DARK_BUTTON.classList.toggle("d-none");
+  LIGHT_BUTTON.forEach(el => {
+    el.addEventListener("click", function () {
+      
+      document.body.classList.toggle("dark");
 
-    //set local storage
-    if (document.body.classList.contains("dark") == false) {
-        localStorage.setItem("theme", "");
-    }
-  });
+      LIGHT_BUTTON.forEach(lbEL => lbEL.classList.toggle("d-none"));
+      DARK_BUTTON.forEach(dbEL => dbEL.classList.toggle("d-none"));
+  
+      //set local storage
+      if (document.body.classList.contains("dark") == false) {
+          localStorage.setItem("theme", "");
+      }
+    });
+  })
 
   //toggle button dark button
-  DARK_BUTTON.addEventListener("click", function () {
-    document.body.classList.toggle("dark");
-    LIGHT_BUTTON.classList.toggle("d-none");
-    DARK_BUTTON.classList.toggle("d-none");
+  DARK_BUTTON.forEach(el => {
+    el.addEventListener("click", function () {
+      
+      document.body.classList.toggle("dark");
 
-    //set local storage
-    if (document.body.classList.contains("dark")) {
-        localStorage.setItem("theme", "dark");
-    }
-  });
+      LIGHT_BUTTON.forEach(lbEL => lbEL.classList.toggle("d-none"));
+      DARK_BUTTON.forEach(dbEL => dbEL.classList.toggle("d-none"));
+  
+      //set local storage
+      if (document.body.classList.contains("dark") == true) {
+          localStorage.setItem("theme", "dark");
+      }
+    });
+  })
 };

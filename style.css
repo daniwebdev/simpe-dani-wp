@@ -4,7 +4,7 @@ Theme URI: https://me.dani.work/simpe-dani-wp/
 Author: Dani
 Author URI: https://me.dani.work/
 Description: This is a simple Dani WP theme.
-Version: 1.0.0
+Version: 1.0.1
 Requires at least: 4.5
 Tested up to: 5.9
 Requires PHP: 7.4
@@ -404,6 +404,10 @@ article .date-time-author {
 }
 
 
+#single-article, #article {
+    margin-top: 20px !important;
+}
+
 /* SIngle Article */
 
 #single-article {
@@ -453,9 +457,6 @@ article .date-time-author {
 }
 
 
-#single-article .content p:last-child {
-    margin-bottom: 0;
-}
 
 #single-article .date-time-author {
     margin-bottom: 20px;
@@ -463,8 +464,14 @@ article .date-time-author {
     font-style: italic;
 }
 
-#single-article .content p {
+#single-article .content p,
+#single-article .content ul {
     margin-bottom: 24px;
+}
+
+#single-article .content p:last-child,
+#single-article .content ul:last-child {
+    margin-bottom: 0;
 }
 
 #single-article .content .wp-caption img {
@@ -593,7 +600,6 @@ article .date-time-author {
 
 /* Pagination */
 .post-navigate {
-    margin-top: 30px;
     border-top: 1px solid #e0e0e0;
     padding-top: 30px;
 }
