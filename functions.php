@@ -3,12 +3,18 @@ function wp_init()
 {
     register_nav_menu('simple-dani-wp-menu', __('Simple Dani WP Menu'));
 
+    
     add_theme_support( 'title-tag' );
+    
+    // Add post thumbnails (featured image) support
+    add_theme_support( 'post-thumbnails' );
+
 }
 
 add_action('init', 'wp_init');
 
 function wpb_init_widgets_custom($id) {
+    /* Register sidebar widget */
     register_sidebar(array(
         'name' => 'simpel-dani-wp-sidebar',
         'id'   => 'customsidebar-id',
@@ -18,6 +24,7 @@ function wpb_init_widgets_custom($id) {
         'after_title' => '</h4>'
     ));
     
+    /* Register sidebar widget */
     register_sidebar(array(
         'name' => 'sidebar_single_page',
         'id'   => 'sidebar_single_page_id',
@@ -36,11 +43,6 @@ function bootstrap_pagination( \WP_Query $wp_query = null, $echo = true, $params
     }
 
     $add_args = [];
-
-    //add query (GET) parameters to generated page URLs
-    /*if (isset($_GET[ 'sort' ])) {
-        $add_args[ 'sort' ] = (string)$_GET[ 'sort' ];
-    }*/
 
     $pages = paginate_links( array_merge( [
             'base'         => str_replace( 999999999, '%#%', esc_url( get_pagenum_link( 999999999 ) ) ),
