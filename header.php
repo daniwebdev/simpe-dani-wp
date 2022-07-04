@@ -13,7 +13,7 @@ Version : <?= wp_get_theme()->get('Version'); ?>
 -->
 <!doctype html>
 
-<html <?php language_attributes(); ?> class="no-js">
+<html <?php language_attributes(); ?> class="no-js" >
 
 <head>
     <!-- Required meta tags -->
@@ -32,7 +32,8 @@ Version : <?= wp_get_theme()->get('Version'); ?>
 
 </head>
 
-<body class="dark">
+<body class="dark" >
+
     <header class="mt-4 d-none d-md-block">
         <div class="container d-block d-md-flex text-center text-md-start">
             

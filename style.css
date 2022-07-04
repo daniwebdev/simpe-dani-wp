@@ -23,11 +23,18 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
+@import './fonts.css';
 @import './style-dark.css';
 
 /* Block Plugin */
 pre.wp-block-code {
     margin-bottom: 24px;
+}
+pre.wp-block-code * {
+    font-family: 'dm' !important;
+}
+pre.wp-block-code .token.function, pre.wp-block-code .token.comment {
+    font-style: italic;
 }
 /* /Block Plugin */
 
