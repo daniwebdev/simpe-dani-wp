@@ -38,7 +38,9 @@ Version : <?= wp_get_theme()->get('Version'); ?>
         <div class="container d-block d-md-flex text-center text-md-start">
             
             <div class="image">
-                <img class="rounded-circle" width="150" src="https://www.gravatar.com/avatar/<?=md5('me@dani.work');?>?s=300" alt="" />
+                <a href="<?=get_bloginfo('wpurl');?>">
+                    <img class="rounded-circle" width="150" src="https://www.gravatar.com/avatar/<?=md5('me@dani.work');?>?s=300" alt="" />
+                </a>
             </div>
 
             <div class="profile" style="width: 100%">
@@ -87,6 +89,7 @@ Version : <?= wp_get_theme()->get('Version'); ?>
                         <?php
                             //wp_nav_menu
                             wp_nav_menu([
+
                             ]);
                         ?>
                         </div>

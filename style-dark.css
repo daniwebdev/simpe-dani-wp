@@ -109,13 +109,6 @@ body.dark a {
     color: #afafaf;
 }
 
-body.dark .content a {
-    color: #e40aad;
-
-    text-decoration: underline;
-    text-underline-offset: 4px;
-    text-decoration-style: dotted;
-}
 
 /* Table Content */
 

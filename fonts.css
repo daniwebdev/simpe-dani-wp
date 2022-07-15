@@ -6,7 +6,7 @@
  * © 2018 Phil Plückthun. All Rights Reserved.
  */
  @font-face {
-    font-family: 'dm';
+    font-family: 'codeblock';
     font-weight: normal;
     font-style: normal;
     unicode-range: U+0000-007F;
@@ -14,7 +14,7 @@
 }
 
 @font-face {
-    font-family: 'dm';
+    font-family: 'codeblock';
     font-weight: normal;
     font-style: normal;
     unicode-range: U+0080-1AFF;
@@ -22,7 +22,7 @@
 }
 
 @font-face {
-    font-family: 'dm';
+    font-family: 'codeblock';
     font-weight: normal;
     font-style: normal;
     unicode-range: U+1B00-218F;
@@ -30,7 +30,7 @@
 }
 
 @font-face {
-    font-family: 'dm';
+    font-family: 'codeblock';
     font-weight: normal;
     font-style: normal;
     unicode-range: U+2190-21FF;
@@ -38,7 +38,7 @@
 }
 
 @font-face {
-    font-family: 'dm';
+    font-family: 'codeblock';
     font-weight: normal;
     font-style: normal;
     unicode-range: U+2200-10FFFF;
@@ -46,7 +46,7 @@
 }
 
 @font-face {
-    font-family: 'dm';
+    font-family: 'codeblock';
     font-weight: normal;
     font-style: italic;
     unicode-range: U+0000-007F;
@@ -54,7 +54,7 @@
 }
 
 @font-face {
-    font-family: 'dm';
+    font-family: 'codeblock';
     font-weight: normal;
     font-style: italic;
     unicode-range: U+0080-1AFF;
@@ -62,7 +62,7 @@
 }
 
 @font-face {
-    font-family: 'dm';
+    font-family: 'codeblock';
     font-weight: normal;
     font-style: italic;
     unicode-range: U+1B00-218F;
@@ -70,7 +70,7 @@
 }
 
 @font-face {
-    font-family: 'dm';
+    font-family: 'codeblock';
     font-weight: normal;
     font-style: italic;
     unicode-range: U+2190-21FF;
@@ -78,7 +78,7 @@
 }
 
 @font-face {
-    font-family: 'dm';
+    font-family: 'codeblock';
     font-weight: normal;
     font-style: italic;
     unicode-range: U+2200-10FFFF;

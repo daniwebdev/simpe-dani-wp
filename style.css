@@ -4,7 +4,7 @@ Theme URI: https://me.dani.work/simpe-dani-wp/
 Author: Dani
 Author URI: https://me.dani.work/
 Description: This is a simple Dani WP theme.
-Version: 1.0.5
+Version: 1.0.9
 Requires at least: 4.5
 Tested up to: 5.9
 Requires PHP: 7.4
@@ -25,21 +25,26 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 @import './fonts.css';
 @import './style-dark.css';
-
+pre {
+    font-family: Hack, "Fira Code", Consolas, Menlo, Monaco, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
+}
 /* Block Plugin */
 pre.wp-block-code {
     margin-bottom: 24px;
 }
 pre.wp-block-code * {
-    font-family: 'dm' !important;
+    font-family: 'codeblock' !important;
+    font-size: 16px !important;
 }
+
 pre.wp-block-code .token.function, pre.wp-block-code .token.comment {
     font-style: italic;
 }
 /* /Block Plugin */
 
 body {
-    --bs-primary: #e40aad;
+    /* --bs-primary: #e40aad; */
+
     font-family: 'Poppins', sans-serif;
     color: #404040;
 }
@@ -48,13 +53,11 @@ a {
     text-decoration: none;
 }
 
-a:hover {
+a:hover:not(.btn) {
     color: #e40aad;
 }
 
-pre {
-    font-family: Hack, "Fira Code", Consolas, Menlo, Monaco, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
-}
+
 
 header {
     padding: 20px 0px;
@@ -400,6 +403,10 @@ article h2 {
     font-weight: 600;
 }
 
+article ul li {
+    margin-bottom: 10px;
+}
+
 article .date-time-author {
     font-size: 1rem;
     margin-top: 10px;
@@ -456,7 +463,7 @@ article .date-time-author {
     font-size: 16px;
 }
 
-#single-article .content a {
+#single-article .content a:not(.btn) {
     color: #e40aad;
     text-decoration: underline;
     text-underline-offset: 4px;
@@ -653,3 +660,25 @@ article .date-time-author {
     text-decoration: none;
     margin-right: 10px;
 }
+
+/* post-tags */
+
+.post-tags ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.post-tags ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.post-tags ul li a {
+    color: #e40aad;
+    text-decoration: none !important;
+}
+.post-tags ul li a::before {
+    content: "#";
+}
+/* post-tags */

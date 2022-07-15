@@ -55,20 +55,50 @@ get_header();
 				<?php endif; ?>
 
 				<div class="content">
+
 					<?php
 						the_content();
+					
+						$tags = get_the_tags();
+					?>
+
+
+					<?php
+					if($tags):
+					?>
+						<div class="post-tags">
+							<ul>
+								<?php
+									foreach($tags as $tag):
+										echo '<li><a href="'.get_tag_link($tag->term_id).'">'.$tag->name.'</a></li>';
+									endforeach;
+								?>
+							</ul>
+						</div>
+					<?php
+					endif;
 					?>
 				</div>
 
-				<div class="post-navigate d-flex justify-content-between mt-5">
-					<div class="prev">
+				<div class="post-navigate row mt-5">
+					<div class="prev col-md-6 ">
+						<span class="text-gray d-block" style="font-size: 14px;">
+							Previous
+						</span>
 						<?php
-							previous_post_link( '%link', '<i class="fas fa-arrow-left"></i> %title' );
+							previous_post_link( '%link', '%title' );
 						?>
 					</div>
-					<div class="next">
+					<div class="next col-md-6 ">
 						<?php
-							next_post_link( '%link', '%title <i class="fas fa-arrow-right"></i>', true );
+						if(get_next_post_link( '%link', '%title' )):
+						?>
+						<span class="text-gray d-block" style="font-size: 14px;">
+							Next
+						</span>
+						<?php
+							echo get_next_post_link( '%link', '%title' );
+						endif;
 						?>
 					</div>
 				</div>
