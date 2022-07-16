@@ -76,13 +76,17 @@ body.dark ul.pagination li.active .page-link {
 
 
 /* Sub menu */
-
+body.dark .menu-main-menu-container .menu .menu-item.menu-item-has-children {
+    position: relative;
+}
 body.dark .menu-main-menu-container .menu .menu-item.menu-item-has-children:hover .sub-menu {
     display: block;
     position: absolute;
     background: #1f2c3d;
     border: none;
     padding: 0px;
+    right: 0px;
+    min-width: 200px;
     border-radius: 10px;
 }
 
@@ -147,4 +151,18 @@ body.dark .sidebar-module li a::before {
 body.dark .post-navigate {
     border-top: 1px solid #273F4A;
     padding-top: 30px;
+}
+
+/* --------------------------------- */
+/*          COMMENT SECTION          */
+/* --------------------------------- */
+body.dark #comment-section ol.commentlist li {
+    border-bottom: 1px solid #17202e;
+    box-shadow: 2px 2px 2px 0px #1a2434;
+}
+body.dark #comment-section ol.commentlist li:nth-child(odd) {
+    background: #1b2638;
+}
+body.dark #comment-section ol.commentlist li:nth-child(even) {
+    background: #212f45;
 }

@@ -14,6 +14,7 @@ function wp_init()
 add_action('init', 'wp_init');
 
 function wpb_init_widgets_custom($id) {
+
     /* Register sidebar widget */
     register_sidebar(array(
         'name' => 'simpel-dani-wp-sidebar',
@@ -33,8 +34,8 @@ function wpb_init_widgets_custom($id) {
         'before_title' => '<h4>',
         'after_title' => '</h4>'
     ));
-}
 
+}
 add_action('widgets_init','wpb_init_widgets_custom');
 
 function bootstrap_pagination( \WP_Query $wp_query = null, $echo = true, $params = [] ) {
@@ -80,3 +81,4 @@ function bootstrap_pagination( \WP_Query $wp_query = null, $echo = true, $params
 
     return null;
 }
+

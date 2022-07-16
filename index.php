@@ -4,8 +4,10 @@ get_header();
 
 <div id="article">
   <div class="container">
-    <div class="row g-5">
-      <div class="col-md-9">
+    <div class="row">
+      
+      <main class="col-md-9">
+        
       <?php
         $args = array(
           'post_type' => 'post',
@@ -36,10 +38,12 @@ get_header();
       ?>
       <?php echo bootstrap_pagination() ?>
 
-      </div> <!-- Main Content -->
+      </main> <!-- Main Content -->
+      
+      <!-- BEGIN: Sidebar -->
       <div class="col-md-3 mt-4 mt-md-0">
         <?php get_sidebar(); ?>
-      </div> <!-- Sidebar -->
+      </div> <!-- END: Sidebar -->
     </div>
   </div>
 </div>

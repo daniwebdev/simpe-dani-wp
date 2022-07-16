@@ -28,7 +28,11 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 pre {
     font-family: Hack, "Fira Code", Consolas, Menlo, Monaco, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
 }
+
+
+/* ----------------------- */
 /* Block Plugin */
+/* ----------------------- */
 pre.wp-block-code {
     margin-bottom: 24px;
 }
@@ -40,7 +44,32 @@ pre.wp-block-code * {
 pre.wp-block-code .token.function, pre.wp-block-code .token.comment {
     font-style: italic;
 }
+/* ----------------------- */
 /* /Block Plugin */
+/* ----------------------- */
+
+
+/* ----------------------- */
+/* Navbar */
+/* ----------------------- */
+nav {   
+    z-index: 1;
+    background: #1e2837;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+nav .brand a {
+    display: block;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+
+/* ----------------------- */
 
 body {
     /* --bs-primary: #e40aad; */
@@ -58,24 +87,6 @@ a:hover:not(.btn) {
 }
 
 
-
-header {
-    padding: 20px 0px;
-}
-
-header .title {
-    font-weight: 600;
-    font-size: 2em;
-}
-
-header a {
-    text-decoration: inherit;
-    color: inherit;
-}
-
-header .image {
-    margin-right: 20px;
-}
 
 #content {
     margin-top: 20px;
@@ -408,8 +419,8 @@ article ul li {
 }
 
 article .date-time-author {
-    font-size: 1rem;
-    margin-top: 10px;
+    font-size: 1em;
+    /* margin-top: 10px; */
     color: #818080;
 }
 
@@ -472,11 +483,6 @@ article .date-time-author {
 
 
 
-#single-article .date-time-author {
-    margin-bottom: 20px;
-    font-size: 17px;
-    font-style: italic;
-}
 
 #single-article .content p,
 #single-article .content ul {
@@ -511,7 +517,11 @@ article .date-time-author {
 /* </SIngle Article> */
 
 
-/* Comments */
+
+
+/* ---------------------------- */
+/* Comment Section */
+/* ---------------------------- */
 
 #comment-section {
     margin-top: 30px;
@@ -574,15 +584,50 @@ article .date-time-author {
     border-radius: 5px;
     padding: 10px 20px;
     border: none;
-    margin-top: 20px;
 }
 
 #comment-section #respond .comment-form-comment textarea:focus {
     border: 1px solid var(--bs-primary);
+    outline: none;
 }
 
+#commentform {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+}
 
+.comment-notes {
+    font-size: 14px;
+    grid-column: 1 / span 3;
+    margin-bottom: 20px;
+}
+.comment-notes #email-notes {
+    display: block;
+
+}
+.comment-form-comment {
+    grid-column: 1 / span 3;
+}
+.comment-form-cookies-consent {
+    grid-column: 1 / span 3;
+}
+.comment-form-url {
+    grid-column: 1 / span 3;
+}
+#respond .required {
+    color: red;
+}
+
+.comment .says {
+    display: block;
+    margin-top: 10px;
+}
+
+/* ---------------------------- */
 /* /Comments */
+/* ---------------------------- */
+
 
 
 /* Table */
@@ -622,7 +667,12 @@ article .date-time-author {
 }
 /* /Pagination */
 
+
+
+/* ------------------------------- */
 /* Search Widget */
+/* ------------------------------- */
+
 .wp-block-search.wp-block-search__button-inside .wp-block-search__inside-wrapper {
     padding: 0 !important;
     border: none;
@@ -641,8 +691,8 @@ article .date-time-author {
     border-radius: 5px;
     font-size: 14px;
 }
-
 /* </SEarch WIdget */
+/* ------------------------------- */
 
 
 .sharebutton-single {
@@ -661,7 +711,12 @@ article .date-time-author {
     margin-right: 10px;
 }
 
+
+
+
+/* ------------------------------- */
 /* post-tags */
+/* ------------------------------- */
 
 .post-tags ul {
     list-style: none;
@@ -682,3 +737,87 @@ article .date-time-author {
     content: "#";
 }
 /* post-tags */
+/* ------------------------------- */
+
+
+
+
+
+/* ----------------------------------------- */
+/*                  FOOTER                   */
+/* ----------------------------------------- */
+footer .footer-top {
+    background-color: #242f42;
+}
+
+footer .footer-top h5 {
+    font-size: 25px;
+}
+
+footer .footer-top .blog-info p {
+    color:#7a8494;
+    margin: 0px;
+    font-size: 16px;
+}
+/* ----------------------------------------- */
+
+
+/* ================================== */
+
+/*        BREADCRUMB SECTION          */
+
+/* ================================== */
+
+.breadcrumb ul {
+  --tw-text-opacity: 1;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
+}
+
+.dark .breadcrumb ul {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
+.breadcrumb ul {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.breadcrumb ul li {
+  display: inline-block;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.breadcrumb ul li:last-child {
+  overflow: hidden;
+  text-overflow: ellipsis !important;
+  max-width: 200px;
+  color: #7d7d7d;
+}
+
+.breadcrumb ul li:after {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  margin: 0px 10px 0px 10px;
+  height: 10px;
+  background: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' fill='%23CFCFCF'%3E%3Cpath d='M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z'/%3E%3C/svg%3E%0A");
+  background-size: 16px 16px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.breadcrumb ul li:last-child:after {
+  display: none;
+  /* width: 25px;
+  height: 25px;
+  background: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' fill='%23CFCFCF'%3E%3Cpath d='M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z'/%3E%3C/svg%3E%0A");
+  background-size: 25px 25px; */
+}
