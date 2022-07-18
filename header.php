@@ -28,10 +28,26 @@ Version : <?= wp_get_theme()->get('Version'); ?>
     <?= wp_head(); ?>
     <!-- </WP Head> -->
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css">
+
     <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/style.css?v=<?=wp_get_theme()->get("Version");?>">
 
 </head>
 
 <body class="dark" >
+    <div id="" class="search-modal" data-behaviour="modal">
+        <button onclick="toogleSearchModal()" class="btn position-absolute bg-transparent" style="right: 3em; top: 3em">
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </button>
+
+        <form action="<?=get_home_url();?>">
+            <div class="input-group" style="max-width: 800px">
+                <input type="text" name="s" class="form-control text-white" placeholder="Search...">
+                <button type="button" class="btn btn-outline-primary">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+            </div>
+        </form>
+    </div>  
 
     <?=get_template_part( 'template-parts/navbar');?>

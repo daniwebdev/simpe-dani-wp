@@ -14,7 +14,15 @@ $category = get_the_category();
       <div class="col-md-9">
         <header>
             <?php
-              the_archive_title( '<h2 class="page-title">', '</h2>' );
+
+              if(is_category()) {
+                echo '<h2 class="page-title">';
+                echo single_cat_title( '', false );
+                echo '</h2>';
+              } else {
+                the_archive_title( '<h2 class="page-title">', '</h2>' );
+              }
+
               the_archive_description( '<div class="archive-description">', '</div>' );
             ?>
           <hr>

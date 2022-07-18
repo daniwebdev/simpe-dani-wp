@@ -6,8 +6,12 @@
             </a>
         </div>
 
-        <div>
+        <div class="d-flex align-items-center gap-3">
             <?= wp_nav_menu([]); ?>
+
+            <button class="btn search-btn" onclick="toogleSearchModal()">
+                <i class="fas fa-search"></i>
+            </button>
         </div>
 
     </div>

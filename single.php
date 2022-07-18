@@ -4,10 +4,10 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package Miniva
  */
 
 get_header();
+setPostViews(get_the_ID());
 ?>
 
 <div class="container">

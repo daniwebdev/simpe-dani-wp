@@ -1,12 +1,21 @@
 <?php
-get_header();
+  // $the_query = new WP_Query( array(
+  //   'meta_key' => 'post_views_count',
+  //   'orderby' => 'meta_value_num',
+  //   'posts_per_page' => 5
+  // ) );
+
+  get_header();
+
 ?>
 
-<div id="article">
-  <div class="container">
-    <div class="row">
+<?=get_template_part( 'template-parts/header-discover');?>
+
+<div class="container p-0">
+  <div id="article">
+    <div class="row g-5">
       
-      <main class="col-md-9">
+      <main class="col-md-8">
         
       <?php
         $args = array(
@@ -27,7 +36,7 @@ get_header();
                   <div class="col-md-9">
                   <?=get_template_part( 'template-parts/post', 'list');?>
                   </div>
-                  <div class="col-md-3 rounded" style="background: url(<?=get_the_post_thumbnail_url();?>); background-position: center; background-size: cover">
+                  <div loading="lazy" class="col-md-3 rounded" style="background: url(<?=get_the_post_thumbnail_url();?>); background-position: center; background-size: cover">
                   </div>
               </article>
           <?php
@@ -41,7 +50,7 @@ get_header();
       </main> <!-- Main Content -->
       
       <!-- BEGIN: Sidebar -->
-      <div class="col-md-3 mt-4 mt-md-0">
+      <div class="col-md-4">
         <?php get_sidebar(); ?>
       </div> <!-- END: Sidebar -->
     </div>
