@@ -2,7 +2,7 @@ var LIGHT_BUTTON = document.querySelectorAll("#button-light");
 var DARK_BUTTON = document.querySelectorAll("#button-dark");
 
 document.body.onload = function () {
-  if (localStorage.getItem("theme") === "dark") {
+  if (true || localStorage.getItem("theme") === "dark") {
     document.body.classList.add("dark");
   } else {
     document.body.classList.remove("dark");
