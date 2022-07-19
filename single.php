@@ -11,10 +11,8 @@ setPostViews(get_the_ID());
 ?>
 
 <div class="container">
-
-
 	
-	<div class="row g-5">
+	<div class="row g-0 g-mg-5">
 		<div class="col-md-9">
 			<main id="single-article" class="" role="main">
 				<div class="breadcrumb">

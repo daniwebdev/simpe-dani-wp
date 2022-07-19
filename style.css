@@ -4,7 +4,7 @@ Theme URI: https://me.dani.work/simpe-dani-wp/
 Author: Dani
 Author URI: https://me.dani.work/
 Description: This is a simple Dani WP theme.
-Version: 2.0.1
+Version: 2.0.2
 Requires at least: 4.5
 Tested up to: 5.9
 Requires PHP: 7.4
@@ -49,13 +49,13 @@ pre.wp-block-code .token.function, pre.wp-block-code .token.comment {
 /* ----------------------- */
 /* Navbar */
 /* ----------------------- */
-nav {   
+nav.main-nav {   
     z-index: 1;
     background: #1e2837;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 }
 
-nav .brand a {
+nav.main-nav .brand a {
     display: block;
     font-size: 20px;
     color: white;
@@ -63,6 +63,179 @@ nav .brand a {
     padding-top: 5px;
     padding-bottom: 5px;
 }
+
+/* Menu */
+
+/* @media screen and (max-width: 991px) {
+    .menu-main-menu-container {
+        margin-top: 20px !important;
+        border-radius: 20px;
+    }
+    .menu-main-menu-container ul li {
+        margin: 0px !important;
+        padding: 0px !important;
+        height: auto !important;
+        display: block !important;
+    }
+    .menu-main-menu-container ul li a {
+        padding: 10px !important;
+        background: #f0f0f0;
+        display: block;
+    }
+    .menu-main-menu-container ul li:first-child a {
+        border-radius: 20px 20px 0px 0px;
+    }
+    .menu-main-menu-container ul li:last-child a {
+        border-radius: 0px 0px 20px 20px ;
+    }
+    .menu-main-menu-container .menu>.menu-item::after {
+        content: '' !important;
+        margin: 0px !important;
+    }
+} */
+
+nav .menu-main-menu-container {
+    margin: 0;
+    padding: 0;
+}
+
+nav .menu-main-menu-container .menu {
+    margin: 0;
+    padding: 0;
+}
+
+nav .menu-main-menu-container .menu .menu-item:last-child {
+    margin-right: 0;
+}
+
+nav .menu-main-menu-container .menu .menu-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav .menu-main-menu-container .menu>.menu-item:last-child:after {
+    content: none;
+}
+
+nav .menu-main-menu-container .menu>.menu-item::after {
+    content: ' · ';
+    margin: 0px 10px 0px 10px;
+}
+
+nav .menu-main-menu-container .menu .menu-item {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+}
+
+
+/* Sub Menu */
+
+nav .menu-main-menu-container .menu .menu-item.menu-item-has-children .sub-menu {
+    display: none;
+    z-index: 1000;
+}
+
+nav .menu-main-menu-container .menu .menu-item.menu-item-has-children:hover .sub-menu {
+    display: block;
+    position: absolute;
+    background: white;
+    border: 1px solid #e0e0e0;
+    padding: 0px;
+    border-radius: 10px;
+}
+
+nav .menu-main-menu-container .menu .menu-item.menu-item-has-children .sub-menu .menu-item a {
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+}
+
+nav .menu-main-menu-container .menu .menu-item.menu-item-has-children .sub-menu .menu-item:hover a {
+    text-decoration: none;
+    background: #e0e0e0;
+    border-radius: 10px;
+}
+
+nav .menu-main-menu-container .menu .menu-item.menu-item-has-children .sub-menu .menu-item {
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* ----------------------------- */
+/* ----------------------------- */
+.sidenav-overlay {
+    z-index: 1;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: hidden !important;
+    width: 100% !important;
+    background: rgba(0, 0, 0, 0.5);
+}
+.sidenav-overlay.active {
+    display: block;
+    position: fixed;
+}
+.sidenav.show {
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+.sidenav {
+    position: fixed;
+    top: 0;
+    left: -1000px;
+    bottom: 0;
+    background: #1e2837;
+    width: 50%;
+    min-width: 200px;
+    max-width: 300px;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.sidenav ul.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidenav ul.menu li a {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+}
+.sidenav ul.menu li.menu-item-has-children > a::after {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: "\f105";
+}
+.sidenav ul.menu li.menu-item-has-children.active > a::after {
+    content: "\f107";
+}
+
+
+.sidenav ul.menu li.menu-item-has-children.active a {
+    background: #242f41;
+}
+.sidenav ul.menu li.menu-item-has-children.active ul.sub-menu {
+    display: block;
+}
+.sidenav ul.sub-menu {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sidenav ul.sub-menu li {
+    padding-left: 20px;
+}
+
 
 
 
@@ -214,108 +387,6 @@ h2.title {
 
 
 /* Wordpress */
-
-
-/* Menu */
-
-@media screen and (max-width: 991px) {
-    .menu-main-menu-container {
-        margin-top: 20px !important;
-        border-radius: 20px;
-    }
-    .menu-main-menu-container ul li {
-        margin: 0px !important;
-        padding: 0px !important;
-        height: auto !important;
-        display: block !important;
-    }
-    .menu-main-menu-container ul li a {
-        padding: 10px !important;
-        background: #f0f0f0;
-        display: block;
-    }
-    .menu-main-menu-container ul li:first-child a {
-        border-radius: 20px 20px 0px 0px;
-    }
-    .menu-main-menu-container ul li:last-child a {
-        border-radius: 0px 0px 20px 20px ;
-    }
-    .menu-main-menu-container .menu>.menu-item::after {
-        content: '' !important;
-        margin: 0px !important;
-    }
-}
-
-.menu-main-menu-container {
-    margin: 0;
-    padding: 0;
-}
-
-.menu-main-menu-container .menu {
-    margin: 0;
-    padding: 0;
-}
-
-.menu-main-menu-container .menu .menu-item:last-child {
-    margin-right: 0;
-}
-
-.menu-main-menu-container .menu .menu-item a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.menu-main-menu-container .menu>.menu-item:last-child:after {
-    content: none;
-}
-
-.menu-main-menu-container .menu>.menu-item::after {
-    content: ' · ';
-    margin: 0px 10px 0px 10px;
-}
-
-.menu-main-menu-container .menu .menu-item {
-    display: inline-block;
-    list-style: none;
-    padding: 0;
-}
-
-
-/* Sub Menu */
-
-.menu-main-menu-container .menu .menu-item.menu-item-has-children .sub-menu {
-    display: none;
-    z-index: 1000;
-}
-
-.menu-main-menu-container .menu .menu-item.menu-item-has-children:hover .sub-menu {
-    display: block;
-    position: absolute;
-    background: white;
-    border: 1px solid #e0e0e0;
-    padding: 0px;
-    border-radius: 10px;
-}
-
-.menu-main-menu-container .menu .menu-item.menu-item-has-children .sub-menu .menu-item a {
-    text-decoration: none;
-    display: block;
-    padding: 10px 15px;
-}
-
-.menu-main-menu-container .menu .menu-item.menu-item-has-children .sub-menu .menu-item:hover a {
-    text-decoration: none;
-    background: #e0e0e0;
-    border-radius: 10px;
-}
-
-.menu-main-menu-container .menu .menu-item.menu-item-has-children .sub-menu .menu-item {
-    display: block;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
 
 /* <WP Sidebar> */
 
@@ -800,6 +871,9 @@ footer .footer-navigation li:not(:last-child)::after {
   margin: 0;
   padding: 0;
   margin-bottom: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 
@@ -814,12 +888,13 @@ footer .footer-navigation li:not(:last-child)::after {
   font-size: 14px;
   text-transform: uppercase;
   font-weight: bold;
+  vertical-align: middle;
 }
 
 .breadcrumb ul li {
-  display: inline-block;
-  align-items: center;
+  display: inline;
   white-space: nowrap;
+text-overflow: ellipsis;
 }
 
 .breadcrumb ul li:last-child {
@@ -831,8 +906,8 @@ footer .footer-navigation li:not(:last-child)::after {
 
 .breadcrumb ul li:after {
   content: '';
-  display: inline-block;
-  width: 20px;
+  display: inline-flex;
+  width: 10px;
   margin: 0px 10px 0px 10px;
   height: 10px;
   background: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' fill='%23CFCFCF'%3E%3Cpath d='M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z'/%3E%3C/svg%3E%0A");
@@ -891,7 +966,7 @@ footer .footer-navigation li:not(:last-child)::after {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    min-header: 400px;
+    min-height: 400px;
 }
 
 #discover .discover-item:nth-of-type(1) {
@@ -912,7 +987,7 @@ footer .footer-navigation li:not(:last-child)::after {
     bottom: 0px;
 }
 /* --------------------------------------- */
-//|
+/* 
 //|
 //|
 //|
@@ -973,7 +1048,7 @@ footer .footer-navigation li:not(:last-child)::after {
 .search-modal {
     overflow-y: auto;
     position: fixed;
-    top: -100vh;
+    top: -200vh;
     left: 0;
     width: 100%;
     height: 100%;

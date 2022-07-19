@@ -11,11 +11,11 @@
 
 <?=get_template_part( 'template-parts/header-discover');?>
 
-<div class="container p-0">
+<div class="container">
   <div id="article">
-    <div class="row g-5">
+    <div class="row">
       
-      <main class="col-md-8">
+      <main class="col-12 col-md-8">
         
       <?php
         $args = array(
@@ -50,7 +50,7 @@
       </main> <!-- Main Content -->
       
       <!-- BEGIN: Sidebar -->
-      <div class="col-md-4">
+      <div class="col-12  col-md-4">
         <?php get_sidebar(); ?>
       </div> <!-- END: Sidebar -->
     </div>

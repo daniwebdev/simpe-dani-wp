@@ -15,7 +15,7 @@ $query = new WP_Query($args);
 
 ?>
 
-<div class="container p-0">
+<div class="container">
     <div id="discover" class="">
 
     <?php

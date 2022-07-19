@@ -76,10 +76,10 @@ body.dark ul.pagination li.active .page-link {
 
 
 /* Sub menu */
-body.dark .menu-main-menu-container .menu .menu-item.menu-item-has-children {
+body.dark nav .menu-main-menu-container .menu .menu-item.menu-item-has-children {
     position: relative;
 }
-body.dark .menu-main-menu-container .menu .menu-item.menu-item-has-children:hover .sub-menu {
+body.dark nav .menu-main-menu-container .menu .menu-item.menu-item-has-children:hover .sub-menu {
     display: block;
     position: absolute;
     background: #1f2c3d;
@@ -90,7 +90,7 @@ body.dark .menu-main-menu-container .menu .menu-item.menu-item-has-children:hove
     border-radius: 10px;
 }
 
-body.dark .menu-main-menu-container .menu .menu-item.menu-item-has-children .sub-menu .menu-item:hover a {
+body.dark nav .menu-main-menu-container .menu .menu-item.menu-item-has-children .sub-menu .menu-item:hover a {
     text-decoration: none;
     background: #272d35;
     border-radius: 10px;
