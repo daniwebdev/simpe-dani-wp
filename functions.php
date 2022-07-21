@@ -3,17 +3,17 @@ function wp_init()
 {
     register_nav_menu('simple-dani-wp-menu', __('Simple Dani WP Menu'));
 
-    
-    add_theme_support( 'title-tag' );
-    
-    // Add post thumbnails (featured image) support
-    add_theme_support( 'post-thumbnails' );
 
+    add_theme_support('title-tag');
+
+    // Add post thumbnails (featured image) support
+    add_theme_support('post-thumbnails');
 }
 
 add_action('init', 'wp_init');
 
-function wpb_init_widgets_custom($id) {
+function wpb_init_widgets_custom($id)
+{
 
     /* Register sidebar widget */
     register_sidebar(array(
@@ -24,7 +24,7 @@ function wpb_init_widgets_custom($id) {
         'before_title' => '<h4>',
         'after_title' => '</h4>'
     ));
-    
+
     /* Register sidebar widget */
     register_sidebar(array(
         'name' => 'sidebar_single_page',
@@ -34,45 +34,46 @@ function wpb_init_widgets_custom($id) {
         'before_title' => '<h4>',
         'after_title' => '</h4>'
     ));
-
 }
-add_action('widgets_init','wpb_init_widgets_custom');
+add_action('widgets_init', 'wpb_init_widgets_custom');
 
-function bootstrap_pagination( \WP_Query $wp_query = null, $echo = true, $params = [] ) {
-    if ( null === $wp_query ) {
+function bootstrap_pagination(\WP_Query $wp_query = null, $echo = true, $params = [])
+{
+    if (null === $wp_query) {
         global $wp_query;
     }
 
     $add_args = [];
 
-    $pages = paginate_links( array_merge( [
-            'base'         => str_replace( 999999999, '%#%', esc_url( get_pagenum_link( 999999999 ) ) ),
+    $pages = paginate_links(
+        array_merge([
+            'base'         => str_replace(999999999, '%#%', esc_url(get_pagenum_link(999999999))),
             'format'       => '?paged=%#%',
-            'current'      => max( 1, get_query_var( 'paged' ) ),
+            'current'      => max(1, get_query_var('paged')),
             'total'        => $wp_query->max_num_pages,
             'type'         => 'array',
             'show_all'     => false,
             'end_size'     => 3,
             'mid_size'     => 1,
             'prev_next'    => true,
-            'prev_text'    => __( '« Prev' ),
-            'next_text'    => __( 'Next »' ),
+            'prev_text'    => __('« Prev'),
+            'next_text'    => __('Next »'),
             'add_args'     => $add_args,
             'add_fragment' => ''
-        ], $params )
+        ], $params)
     );
 
-    if ( is_array( $pages ) ) {
+    if (is_array($pages)) {
         //$current_page = ( get_query_var( 'paged' ) == 0 ) ? 1 : get_query_var( 'paged' );
         $pagination = '<div class="pagination"><ul class="pagination">';
 
-        foreach ( $pages as $page ) {
+        foreach ($pages as $page) {
             $pagination .= '<li class="page-item' . (strpos($page, 'current') !== false ? ' active' : '') . '"> ' . str_replace('page-numbers', 'page-link', $page) . '</li>';
         }
 
         $pagination .= '</ul></div>';
 
-        if ( $echo ) {
+        if ($echo) {
             echo $pagination;
         } else {
             return $pagination;
@@ -82,15 +83,30 @@ function bootstrap_pagination( \WP_Query $wp_query = null, $echo = true, $params
     return null;
 }
 
-function setPostViews($postID) {
+function setPostViews($postID)
+{
     $countKey = 'post_views_count';
     $count = get_post_meta($postID, $countKey, true);
-    if($count==''){
+    if ($count == '') {
         $count = 0;
         delete_post_meta($postID, $countKey);
         add_post_meta($postID, $countKey, '0');
-    }else{
+    } else {
         $count++;
         update_post_meta($postID, $countKey, $count);
     }
+}
+
+function get_the_modified()
+{
+    $u_time = get_the_time('U');
+    $custom_content = '';
+    $u_modified_time = get_the_modified_time('U');
+    if ($u_modified_time >= $u_time + 86400) {
+        $updated_date = get_the_modified_time('F jS, Y');
+        $updated_time = get_the_modified_time('h:i a');
+        $custom_content .= $updated_date . ' at ' . $updated_time;
+    }
+    
+    return $custom_content;
 }
