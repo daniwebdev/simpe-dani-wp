@@ -36,7 +36,7 @@ setPostViews(get_the_ID());
 
 				<div class="d-flex justify-content-between my-3 align-items-center">
 					<div class="date-time-author">
-						Last update <?php the_date();?> by <?php the_author(); ?>
+						Last update <?php the_modified_date();?> by <?php the_author(); ?>
 					</div>
 					<div class="dropdown open p-0 sharebutton-single">
 						<a class="btn dropdown-toggle p-0 m-0" type="button" id="triggerId" data-bs-toggle="dropdown" aria-haspopup="true">
