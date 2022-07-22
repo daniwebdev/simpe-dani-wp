@@ -191,7 +191,7 @@ nav .menu-main-menu-container .menu .menu-item.menu-item-has-children .sub-menu 
     left: -1000px;
     bottom: 0;
     background: #1e2837;
-    width: 50%;
+    width: 80%;
     min-width: 200px;
     max-width: 300px;
     z-index: 1;
@@ -232,8 +232,8 @@ nav .menu-main-menu-container .menu .menu-item.menu-item-has-children .sub-menu 
     padding: 0;
     margin: 0;
 }
-.sidenav ul.sub-menu li {
-    padding-left: 20px;
+.sidenav ul.sub-menu li a {
+    padding-left: 40px;
 }
 
 

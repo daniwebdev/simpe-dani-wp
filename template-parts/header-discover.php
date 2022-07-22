@@ -29,8 +29,8 @@ $query = new WP_Query($args);
                     
                     <div class="discover-item" style="background: url(<?=get_the_post_thumbnail_url();?>);background-size: cover; background-position: center">
                         <div class="discover-summary">
-                            <a href="">
-                                <h3 class="title"><?= the_title(); ?></h3>
+                            <a href="<?=the_permalink();?>">
+                                <h2 class="title"><?= the_title(); ?></h2>
                                 <p class="description">
                                     <?= strlen(get_the_excerpt()) > 100 ? substr(get_the_excerpt(), 0, 100).'...':get_the_excerpt(); ?>
                                 </p>
