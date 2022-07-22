@@ -110,3 +110,28 @@ function get_the_modified()
     
     return $custom_content;
 }
+
+function add_id_to_h2($content) {
+    // add id attribute with snack case to h2
+    $content = preg_replace('/<h2(.*?)>(.*?)<\/h2>/', '<h2$1 id="$2">$2</h2>', $content);
+
+    //get h2 with id as array
+    $h2_array = array();
+    preg_match_all('/<h2(.*?) id="(.*?)"(.*?)>(.*?)<\/h2>/', $content, $h2_array);
+
+    foreach($h2_array as $key => $value) {
+        if($key == 0) {
+            continue;
+        }
+        // to stack case
+        foreach($value as $id) {
+            $h2_id = strtolower(str_replace(' ', '-', $id));
+
+            $content = str_replace('id="'.$id.'"', "id='$h2_id'", $content);
+        }
+    }
+    return $content;
+}
+add_filter( 'the_content', 'add_id_to_h2');
+
+

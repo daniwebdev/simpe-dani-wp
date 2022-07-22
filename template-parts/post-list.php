@@ -1,14 +1,16 @@
-<a class="post-item" href="<?=the_permalink();?>">
-    <h2>
-    <?= the_title(); ?>
-    </h2>
-    <?= the_excerpt(); ?>
-</a>
+<article>
+    <a class="post-item" href="<?=the_permalink();?>">
+        <h2>
+        <?= the_title(); ?>
+        </h2>
+        <?= the_excerpt(); ?>
+    </a>
 
-<div class="date-time-author">
-    
-    <span><?=the_modified_date();?></span>
-    <span class="mx-2 font-weight-bold">·</span>
-    <span class="me-2"><?=get_the_author();?></span>
+    <div class="date-time-author mt-2">
+        
+        <span>Last updated <?=the_modified_date();?></span>
+        <span class="mx-2 font-weight-bold">·</span>
+        <span class="me-2"><?=get_the_author();?></span>
 
-</div>
+    </div>
+</article>

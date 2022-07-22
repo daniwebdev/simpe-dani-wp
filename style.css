@@ -456,13 +456,22 @@ h2.title {
     border-radius: 50%;
 }
 
+/* category */
+.sidebar-module li.cat-item a {
+    display: flex;
+    align-items: center;
+}
+.sidebar-module li.cat-item a {
+    margin-right: 10px;
+}
+
 /* </WP Sidebar> */
 
 
 /* Article */
 
 article:last-child {
-    margin-bottom: 0px;
+    margin-left: 10px;
 }
 
 article {

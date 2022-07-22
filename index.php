@@ -13,7 +13,7 @@
 
 <div class="container">
   <div id="article">
-    <div class="row">
+    <div class="row g-0 g-md-5">
       
       <main class="col-12 col-md-8">
         
@@ -28,20 +28,13 @@
         if (have_posts()) :
           while (have_posts()) : the_post();
               if(get_the_post_thumbnail() == null): ?>
-              <article>
-              <?=get_template_part( 'template-parts/post', 'list');?> 
-              </article>
+                <?=get_template_part( 'template-parts/post', 'list');?> 
               <?php else: ?>
-                <article class="row">
-                  <div class="col-md-9">
-                  <?=get_template_part( 'template-parts/post', 'list');?>
-                  </div>
-                  <div loading="lazy" class="col-md-3 rounded" style="background: url(<?=get_the_post_thumbnail_url();?>); background-position: center; background-size: cover">
-                  </div>
-              </article>
-          <?php
-        endif;
-        endwhile;
+                <?=get_template_part( 'template-parts/post', 'list-thumbnail');?> 
+                
+      <?php
+              endif;
+          endwhile;
         endif;
         
       ?>
