@@ -34,6 +34,16 @@ function wpb_init_widgets_custom($id)
         'before_title' => '<h4>',
         'after_title' => '</h4>'
     ));
+
+    /* Register sidebar widget */
+    register_sidebar(array(
+        'name' => 'footer_widget',
+        'id'   => 'footer_widget',
+        'before_widget' => '<div class="footer_widget">',
+        'after_widget' => '</div>',
+        'before_title' => '<h5 class="m-0 mb-3 p-0 fw-bold">',
+        'after_title' => '</h5>'
+    ));
 }
 add_action('widgets_init', 'wpb_init_widgets_custom');
 

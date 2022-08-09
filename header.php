@@ -32,6 +32,8 @@ Version : <?= wp_get_theme()->get('Version'); ?>
 
     <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/style.css?v=<?=wp_get_theme()->get("Version");?>">
 
+    <script async defer data-website-id="42776a03-0e07-4ab1-aea5-f556c5bf0a17" src="https://umami.dani.work/umami.js"></script>
+
 </head>
 
 <body class="dark" >

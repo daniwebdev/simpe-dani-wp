@@ -21,12 +21,28 @@
 
     </div>
 </nav>
+
 <div class="sidenav-overlay">
     
 </div>
 
-<div class="sidenav">
+<div class="sidenav d-flex flex-column justify-content-between">
     <div class="container py-3">
         <?= wp_nav_menu([]); ?>
+    </div>
+
+    <div class="sidenav-social">
+        <ul>
+            <li>
+                <a href="">
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
     </div>
 </div>
