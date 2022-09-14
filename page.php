@@ -5,7 +5,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package Miniva
+ * @package
  */
 
 get_header();
@@ -39,6 +39,14 @@ get_header();
 			</div>
 		</div>
 	</div>
+
+
+	<?php if(get_the_post_thumbnail() != null): ?>
+	<!-- COVER PAGE -->
+	<img class="mb-3" src="<?=get_the_post_thumbnail_url();?>" alt="<?=the_title();?>" style="width: 100%; border-radius: 20px">
+
+	<?php endif; ?>
+
 	<div class="content">
 		<?php
 		the_content();

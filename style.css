@@ -4,14 +4,14 @@ Theme URI: https://me.dani.work/simpe-dani-wp/
 Author: Dani
 Author URI: https://me.dani.work/
 Description: This is a simple Dani WP theme.
-Version: 2.0.5
+Version: 2.0.7
 Requires at least: 4.5
 Tested up to: 5.9
 Requires PHP: 7.4
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: dani
-Tags: accessibility-ready, blog, block-styles, custom-background, custom-header, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, grid-layout, left-sidebar, right-sidebar, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, two-columns, wide-blocks
+Tags: daniwebdev,insideofcode,blog
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -237,8 +237,6 @@ nav .menu-main-menu-container .menu .menu-item.menu-item-has-children .sub-menu 
 }
 
 
-
-
 /* ----------------------- */
 
 body {
@@ -408,7 +406,7 @@ h2.title {
 }
 
 .sidebar-module h4,.sidebar-module h2,.sidebar-module h3 {
-    font-size: 25px;
+    font-size: 30px;
     font-weight: 600;
     margin-bottom: 10px;
 }
@@ -470,10 +468,6 @@ h2.title {
 
 /* Article */
 
-article:last-child {
-    margin-left: 10px;
-}
-
 article {
     margin-bottom: 30px;
 }
@@ -516,11 +510,6 @@ article .date-time-author {
     max-width: 800px;
 }
 
-#single-article h1 {
-    font-size: 28px;
-    font-weight: 600;
-}
-
 #single-article h1.title {
     font-size: 28px;
     font-weight: 600;
@@ -528,22 +517,17 @@ article .date-time-author {
 }
 
 #single-article h2 {
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 600;
 }
 
 #single-article h3 {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 600;
 }
 
-#single-article h5 {
-    font-size: 16px;
-    font-weight: 600;
-}
-
-#single-article h6 {
-    font-size: 16px;
+#single-article h4,#single-article h5,#single-article h6 {
+    font-size: 23px;
     font-weight: 600;
 }
 
@@ -563,7 +547,7 @@ article .date-time-author {
 
 #single-article .content p,
 #single-article .content ul {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
 }
 
 #single-article .content p:last-child,
@@ -1089,12 +1073,13 @@ text-overflow: ellipsis;
     left: 0;
     width: 100%;
     height: 100%;
-    background: #1e263d;
+    background: #1e263dEE;
     z-index: 9999;
     display: flex;
     align-items: center;
     transition: top .5s ease;
     justify-content: center;
+    padding: 0px 20px;
 }
 
 
@@ -1103,12 +1088,25 @@ text-overflow: ellipsis;
     border: 0;
 
     padding: 10px;
+    outline: none;
     border-radius: 0;
 }
 
-.search-modal button {
+.search-modal .input-group button {
     color: white;
-    background-color: var(--bs-primary);
+    background-color: var(--primary);
     padding: 10px 20px;
     border-radius: 0;
+    border: 1px solid #2D3C54 !important;
+}
+
+.search-modal-dissmis {
+    right: 10px;
+    top: 50px;
+    color: white;
+    font-size: 25px;
+}
+
+.search-modal-dissmis:hover {
+    color: #AAA;
 }

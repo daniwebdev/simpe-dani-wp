@@ -11,7 +11,7 @@
 
 <?=get_template_part( 'template-parts/header-discover');?>
 
-<div class="container">
+<div class="container-lg">
   <div id="article">
     <div class="row g-0 g-md-5">
       

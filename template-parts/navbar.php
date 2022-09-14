@@ -1,5 +1,5 @@
 <nav class="main-nav">
-    <div class="container align-items-center d-flex justify-content-between">
+    <div class="container-lg align-items-center d-flex justify-content-between">
         <button onclick="toggleSideMenu()" class="btn text-white d-block d-lg-none">
             <i class="fas fa-bars"></i>
         </button>
@@ -27,22 +27,22 @@
 </div>
 
 <div class="sidenav d-flex flex-column justify-content-between">
-    <div class="container py-3">
+    <div class="container mt-5">
         <?= wp_nav_menu([]); ?>
     </div>
 
-    <div class="sidenav-social">
-        <ul>
-            <li>
+    <div class="sidenav-social pb-3">
+        <div class="d-flex gap-3 align-items-center justify-content-center">
+            <div>
                 <a href="">
-                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                    <i class="fab fa-facebook" aria-hidden="true"></i> Facebook
                 </a>
-            </li>
-            <li>
+            </div>
+            <div>
                 <a href="">
-                    <i class="fab fa-github" aria-hidden="true"></i>
+                    <i class="fab fa-github" aria-hidden="true"></i> Github
                 </a>
-            </li>
-        </ul>
+            </div>
+        </div>
     </div>
 </div>

@@ -25,13 +25,13 @@
     <div class="py-2 container d-block d-md-flex text-center text-md-normal justify-content-between" style="font-size: 14px">
         <ul class="footer-navigation">
             <li>
-                <a href="/sitemap.xml">Sitemap</a>
+                <a href="<?=home_url('about');?>">About</a>
             </li>
             <li>
-                <a href="/disclaimer">Disclaimer</a>
+                <a href="<?=home_url('sitemap_index.xml');?>">Sitemap</a>
             </li>
             <li>
-                <a href="/privacy">Privacy Policy</a>
+                <a href="<?=home_url('privacy');?>">Privacy Policy</a>
             </li>
         </ul>
 

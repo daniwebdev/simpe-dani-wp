@@ -38,7 +38,7 @@ Version : <?= wp_get_theme()->get('Version'); ?>
 
 <body class="dark" >
     <div id="" class="search-modal" data-behaviour="modal">
-        <button onclick="toogleSearchModal()" class="btn position-absolute bg-transparent" style="right: 3em; top: 3em">
+        <button onclick="toogleSearchModal()" class="btn position-absolute bg-transparent search-modal-dissmis">
             <i class="fa fa-times" aria-hidden="true"></i>
         </button>
 
