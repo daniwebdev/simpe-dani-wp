@@ -26,7 +26,7 @@ get_header();
 			<a class="btn dropdown-toggle p-0 m-0" type="button" id="triggerId" data-bs-toggle="dropdown" aria-haspopup="true">
 				<i class="fa fa-share" aria-hidden="true"></i>
 			</a>
-			<div class="dropdown-menu" aria-labelledby="triggerId">
+			<div class="dropdown-menu dropdown-menu-end" aria-labelledby="triggerId">
 				<a class="dropdown-item" href="https://facebook.com/sharer/sharer.php?u=<?php echo get_permalink(); ?>">
 					<i class="fab fa-facebook me-2" aria-hidden="true"></i> Facebook
 				</a>
